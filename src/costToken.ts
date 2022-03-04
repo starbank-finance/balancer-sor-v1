@@ -5,7 +5,9 @@ import { keccak256, pack } from "@ethersproject/solidity";
 import { BigNumber } from "./utils/bignumber";
 import { BONE } from "./bmath";
 
-const FACTORY_ADDRESS = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f";
+// const FACTORY_ADDRESS = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f";
+const FACTORY_ADDRESS = "0xA9473608514457b4bF083f9045fA63ae5810A03E";
+
 const INIT_CODE_HASH =
   "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f";
 
@@ -44,7 +46,9 @@ export async function getTokenWeiPrice(
   TokenAddr: string,
   provider: BaseProvider
 ): Promise<BigNumber> {
-  const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+  // const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
+  const WETH = "0xAeaaf0e2c81Af264101B9129C00F4440cCF0F720";
+
   if (TokenAddr.toLowerCase() === WETH.toLowerCase())
     return new BigNumber(BONE);
 
