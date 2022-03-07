@@ -38,14 +38,14 @@ export interface Price {
   bestPathsIds?: string[];
 }
 
-export type Swap = {
+export interface Swap {
   pool: string;
   tokenIn: string;
   tokenOut: string;
   swapAmount?: string;
   limitReturnAmount?: string;
   maxPrice?: string;
-};
+}
 
 export interface Pools {
   pools: Pool[];
